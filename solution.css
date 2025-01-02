@@ -1,0 +1,23 @@
+One way to manage this situation is to be mindful of inline styles and avoid them unless absolutely necessary. Alternatively, you can use more specific selectors or the `!important` flag (but use this very cautiously) to override the inline style.
+
+Example using a more specific selector:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div > p {
+  color: green; /* More specific selector overriding inline style */
+}
+
+/* Or with !important (use sparingly): */
+div p {
+  color: green !important; 
+}
+```
+However, remember that overuse of `!important` can lead to difficult-to-maintain CSS.
